@@ -19,4 +19,13 @@ vim.opt.autoindent = true
 -- 5. Indenta automáticamente al pegar
 vim.opt.paste = false
 
+-- Configuración para guardar el historial de deshacer (undo files)
+local undodir = vim.fn.stdpath('data') .. '/undo'
+vim.opt.undodir = undodir
+vim.opt.undofile = true
+
+if vim.fn.isdirectory(undodir) == 0 then
+    vim.fn.mkdir(undodir, 'p')
+end
+
 return M
