@@ -10,6 +10,7 @@ return {
     },
     sections = {
       lualine_z = { -- mostrar la hora en la barra
+        {'location'},
         {
           function()
             return " " .. os.date("%H:%M")
