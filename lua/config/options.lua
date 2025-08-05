@@ -1,4 +1,4 @@
--- Archivo: ~/.config/nvim/lua/options.lua
+-- Archivo: ~/.config/nvim/lua/config/options.lua
 
 local M = {}
 

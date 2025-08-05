@@ -1,4 +1,4 @@
--- Archivo: ~/.config/nvim/lua/keymaps.lua
+-- Archivo: ~/.config/nvim/lua/config/keymaps.lua
 
 local M = {}
 

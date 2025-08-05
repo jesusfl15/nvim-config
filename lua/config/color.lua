@@ -1,4 +1,4 @@
--- Archivo: ~/.config/nvim/lua/color.lua
+-- Archivo: ~/.config/nvim/lua/config/color.lua
 -- Función copiada de un vídeo de ThePrimeagen y módulo creado con la ayuda de Gemini.
 
 local M = {}
