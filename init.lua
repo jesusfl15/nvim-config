@@ -1,10 +1,10 @@
 -- leader y localleader se definen en config.lazy y en options por redundancia
 
-require("options")
-require("keymaps")
-require("config.lazy")
+require("config.options")
+require("config.keymaps")
+require("core.lazy")
 
-color = require("color")
+color = require("config.color")
 color.ColorMyPencils()
 
 
