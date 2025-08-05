@@ -15,10 +15,11 @@ function M.ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "NvimTree", { bg = "none" })
   vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { bg = "none" })
 
+  -- El siguiente bloque es innecesario con lualine
   -- Víncula el color de la barra de estado inactiva a un grupo de resaltado tenue.
   -- Usamos 'Comment' como ejemplo, pero puedes cambiarlo por 'Pmenu' u otro.
-  vim.cmd.hi('StatusLineNC guibg=none') -- Asegura que el fondo sea transparente
-  vim.cmd.hi('link StatusLineNC Comment')
+  -- vim.cmd.hi('StatusLineNC guibg=none') -- Asegura que el fondo sea transparente
+  -- vim.cmd.hi('link StatusLineNC Comment')
 end
 
 return M
