@@ -26,12 +26,14 @@ return {
     vim.keymap.set('n', '<leader>vc', '<cmd>CsvViewToggle<cr>', { desc = 'Toggle CSV View' })
 
 
-    -- Este autocmd abre el plugin al abrir un CSV.
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "csv",
       callback = function()
-        vim.cmd("CsvViewEnable")
+        if vim.fn.exists(":CsvViewEnable") == 2 then
+          vim.cmd("CsvViewEnable")
+        end
       end,
     })
+
   end,
 }
