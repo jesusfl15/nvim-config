@@ -27,9 +27,9 @@ return {
       })
 
       -- Capacidades básicas
-      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      -- local capabilities = vim.lsp.protocol.make_client_capabilities()
       -- Aquí más adelante añadirías
-      -- capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+      local capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
       -- Configura manualmente cada servidor
       -- Ya que setup_handlers se eliminó, configuras cada uno a mano
