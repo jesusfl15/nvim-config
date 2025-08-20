@@ -51,6 +51,11 @@ return {
       -- Configuración personalizada para texlab
       lspconfig.texlab.setup({
         capabilities = capabilities,
+        -- root_dir = lspconfig.util.root_pattern("main.tex", ".git", ".latexmkrc"),
+        root_dir = function(fname)
+          return lspconfig.util.root_pattern("main.tex", ".git", ".latexmkrc")(fname)
+          or vim.fn.expand("%:p:h")
+        end,
         settings = {
           texlab = {
             build = {
