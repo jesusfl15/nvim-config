@@ -21,6 +21,7 @@ return {
           "texlab",
           "lua_ls",
           "bashls",
+          "clangd",
         },
         automatic_installation = true,  -- instala servidores faltantes
         automatic_enable = false, -- desactivo la activación automática para evitar servidores duplicados
@@ -29,7 +30,7 @@ return {
       -- Capacidades básicas
       -- local capabilities = vim.lsp.protocol.make_client_capabilities()
       -- Aquí más adelante añadirías
-      local capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       -- Configura manualmente cada servidor
       -- Ya que setup_handlers se eliminó, configuras cada uno a mano
@@ -64,6 +65,21 @@ return {
           },
         },
       })
+
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+        root_dir = function(fname)
+          return lspconfig.util.root_pattern(
+            "compile_commands.json",
+            "compile_flags.txt",
+            "CMakeLists.txt",
+            "Makefile",
+            ".git",
+            "main.c"
+          )(fname) or vim.fn.expand("%:p:h")
+        end,
+      })
+
     end,
   },
 }
