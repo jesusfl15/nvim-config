@@ -10,4 +10,8 @@ vim.keymap.set("n", "<A-j>", ":move .+1<CR>==")
 vim.keymap.set("v", "<A-k>", ":move '<-2<CR>gv=gv")
 vim.keymap.set("v", "<A-j>", ":move '>+1<CR>gv=gv")
 
+-- Atajos para make.
+vim.keymap.set('n', '<Leader>ma', '<CMD>make<CR>', { desc = "Run make all" })
+vim.keymap.set('n', '<Leader>mc', '<CMD>make clean<CR>', { desc = "Run make clean" })
+
 return M
