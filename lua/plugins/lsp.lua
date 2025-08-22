@@ -12,6 +12,12 @@ return {
       local mason_lspconfig = require("mason-lspconfig")
       local lspconfig = require("lspconfig")
 
+      vim.api.nvim_create_autocmd("CursorHold", {
+        callback = function()
+          vim.diagnostic.open_float(nil, { focus = false, border = "rounded" })
+        end,
+      })
+
       -- Inicializa Mason para gestionar la instalación de servidores LSP
       mason.setup()
 
