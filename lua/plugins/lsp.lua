@@ -10,7 +10,8 @@ return {
     config = function()
       local mason = require("mason")
       local mason_lspconfig = require("mason-lspconfig")
-      local lspconfig = require("lspconfig")
+      --reemplazado por vim.lsp.config
+      --local lspconfig = require("lspconfig")
 
       vim.api.nvim_create_autocmd("CursorHold", {
         callback = function()
@@ -42,7 +43,7 @@ return {
       -- Ya que setup_handlers se eliminó, configuras cada uno a mano
       -- lspconfig.lua_ls.setup({ capabilities = capabilities }) -- config básica, la sustituyo para añadir vim a variables globales
 
-      lspconfig.lua_ls.setup({
+      vim.lsp.config('lua_ls',{
         capabilities = capabilities,
         settings = {
           Lua = {
@@ -53,14 +54,14 @@ return {
         },
       })
 
-      lspconfig.bashls.setup({ capabilities = capabilities })
+      vim.lsp.config('bashls' ,{ capabilities = capabilities })
 
       -- Configuración personalizada para texlab
-      lspconfig.texlab.setup({
+      vim.lsp.config('texlab',{
         capabilities = capabilities,
         -- root_dir = lspconfig.util.root_pattern("main.tex", ".git", ".latexmkrc"),
         root_dir = function(fname)
-          return lspconfig.util.root_pattern("main.tex", ".git", ".latexmkrc")(fname)
+          return vim.lsp.config.util.root_pattern("main.tex", ".git", ".latexmkrc")(fname)
           or vim.fn.expand("%:p:h")
         end,
         settings = {
@@ -72,10 +73,10 @@ return {
         },
       })
 
-      lspconfig.clangd.setup({
+      vim.lsp.config('clangd',{
         capabilities = capabilities,
         root_dir = function(fname)
-          return lspconfig.util.root_pattern(
+          return vim.lsp.config.util.root_pattern(
             "compile_commands.json",
             "compile_flags.txt",
             "CMakeLists.txt",
