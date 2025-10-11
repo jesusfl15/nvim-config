@@ -31,7 +31,9 @@ return {
           "clangd",
         },
         automatic_installation = true,  -- instala servidores faltantes
-        automatic_enable = false, -- desactivo la activación automática para evitar servidores duplicados
+        -- creo que lo siguiente no tiene sentido desde que actualizaron a vim.lsp.config()
+        -- automatic_enable = false, -- desactivo la activación automática para evitar servidores duplicados
+        automatic_enable = true,
       })
 
       -- Capacidades básicas
