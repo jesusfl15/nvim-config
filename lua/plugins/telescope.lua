@@ -7,21 +7,21 @@ return {
   cmd = "Telescope",
   dependencies = {
     -- Es una dependencia necesaria para que Telescope funcione
-    "nvim-lua/plenary.nvim" 
+    "nvim-lua/plenary.nvim"
   },
   keys = {
     -- Tu atajo original para buscar archivos
     { "<leader>pf", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-    
+
     -- Tu atajo para buscar archivos de Git
     { "<C-p>", "<cmd>Telescope git_files<cr>", desc = "Find git files" },
-    
+
     -- Tu atajo para buscar texto, pero con live_grep que es más potente
     { "<leader>ps", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
-    
+
     -- Un atajo muy útil para saltar entre los archivos abiertos (buffers)
     { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
-    
+
      -- Atajo para buscar en el directorio superior
     { "<leader>pd", "<cmd>Telescope find_files cwd=../<cr>", desc = "Find files in parent directory" },
 

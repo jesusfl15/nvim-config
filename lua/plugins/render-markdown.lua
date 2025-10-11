@@ -9,7 +9,7 @@ return {
   -- Si pones true, la previsualización se abrirá automáticamente
   -- al abrir un archivo markdown.
   },
-  
+
   -- Atajos de teclado para usar el plugin
   keys = {
     { "<localleader>m", "<cmd>RenderMarkdown toggle<CR>", desc = "Toggle markdown preview" },
