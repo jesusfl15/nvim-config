@@ -63,8 +63,11 @@ return {
         capabilities = capabilities,
         -- root_dir = lspconfig.util.root_pattern("main.tex", ".git", ".latexmkrc"),
         root_dir = function(fname)
-          return vim.lsp.config.util.root_pattern("main.tex", ".git", ".latexmkrc")(fname)
-          or vim.fn.expand("%:p:h")
+          return require("lspconfig.util").root_pattern(
+            "main.tex",
+            ".git",
+            ".latexmkrc"
+          )(fname) or vim.fn.expand("%:p:h")
         end,
         settings = {
           texlab = {
@@ -78,7 +81,7 @@ return {
       vim.lsp.config('clangd',{
         capabilities = capabilities,
         root_dir = function(fname)
-          return vim.lsp.config.util.root_pattern(
+          return require("lspconfig.util").root_pattern(
             "compile_commands.json",
             "compile_flags.txt",
             "CMakeLists.txt",
