@@ -14,4 +14,6 @@ vim.keymap.set("v", "<A-j>", ":move '>+1<CR>gv=gv")
 vim.keymap.set('n', '<Leader>ma', '<CMD>make<CR>', { desc = "Run make all" })
 vim.keymap.set('n', '<Leader>mc', '<CMD>make clean<CR>', { desc = "Run make clean" })
 
+vim.keymap.set("n", "gw", vim.diagnostic.goto_next)
+vim.keymap.set("n", "gW", vim.diagnostic.goto_prev)
 return M
