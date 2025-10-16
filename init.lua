@@ -4,8 +4,8 @@ require("config.options")
 require("config.keymaps")
 require("core.lazy")
 
-color = require("config.color")
-color.ColorMyPencils()
+Color = require("config.color")
+Color.ColorMyPencils()
 
 
 -- Cambia el directorio de trabajo de Neovim automáticamente
