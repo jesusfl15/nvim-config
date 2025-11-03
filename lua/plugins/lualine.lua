@@ -28,7 +28,7 @@ return {
       icons_enabled = true,
       theme = "auto",
     },
-    extensions = { custom_nvimtree, 'lazy' },
+    extensions = { custom_nvimtree },
     sections = {
       lualine_z = { -- mostrar la hora en la barra
         {'location'},
