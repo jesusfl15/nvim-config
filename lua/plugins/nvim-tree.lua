@@ -1,11 +1,28 @@
 -- Archivo: ~/.config/nvim/lua/plugins/nvim-tree.lua
 -- Creado con ayuda de Gemini
 
+
+-- sacado del propio github de nvim-tree
+local function my_on_attach(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- default mappings
+  api.map.on_attach.default(bufnr)
+
+  -- custom mappings
+  vim.keymap.set("n", "+", api.tree.change_root_to_node, opts("cd"))
+end
+
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = false, -- necesitamos esto para poder abrirlo al principio.
   opts = {
+    on_attach = my_on_attach,
 
     -- Las siguientes líneas no son necesarias por estar activadas por defecto
     -- pero las dejo comentadas para recordarlas en caso de tener algún
