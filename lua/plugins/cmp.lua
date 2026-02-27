@@ -3,11 +3,11 @@
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp", -- fuente para LSP
-    "hrsh7th/cmp-buffer",   -- fuente para buffers abiertos
-    "hrsh7th/cmp-path",     -- fuente para rutas
+    "hrsh7th/cmp-nvim-lsp",     -- fuente para LSP
+    "hrsh7th/cmp-buffer",       -- fuente para buffers abiertos
+    "hrsh7th/cmp-path",         -- fuente para rutas
     "saadparwaiz1/cmp_luasnip", -- integración con LuaSnip
-    "L3MON4D3/LuaSnip",     -- motor de snippets (ya lo configuras en su archivo)
+    "L3MON4D3/LuaSnip",         -- motor de snippets (ya lo configuras en su archivo)
   },
   config = function()
     local cmp = require("cmp")
@@ -49,4 +49,3 @@ return {
     })
   end,
 }
-
