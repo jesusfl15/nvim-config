@@ -16,4 +16,8 @@ vim.keymap.set('n', '<Leader>mc', '<CMD>make clean<CR>', { desc = "Run make clea
 
 vim.keymap.set("n", "gw", vim.diagnostic.goto_next)
 vim.keymap.set("n", "gW", vim.diagnostic.goto_prev)
+
+-- Formateo LSP
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer via LSP" })
+
 return M
