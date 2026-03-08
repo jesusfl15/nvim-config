@@ -34,7 +34,7 @@ return {
 
     -- tabla de imaps simples
     local simple_imaps = {
-      eureka = "patata"
+      -- a = "\\alpha"
     }
 
     -- creo todos los imaps de simple_imaps
