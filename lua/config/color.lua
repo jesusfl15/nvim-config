@@ -11,7 +11,7 @@
 local M = {}
 
 function M.ColorMyPencils(color)
-  color = color or "catppuccin" -- Usa catppuccin por defecto
+  color = color or "catppuccin-nvim" -- Usa catppuccin por defecto
   vim.cmd.colorscheme(color)
 
   -- Lista de grupos de resaltado a los que aplicar fondo transparente
