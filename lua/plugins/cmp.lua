@@ -8,6 +8,7 @@ return {
     "hrsh7th/cmp-path",         -- fuente para rutas
     "saadparwaiz1/cmp_luasnip", -- integración con LuaSnip
     "L3MON4D3/LuaSnip",         -- motor de snippets (ya lo configuras en su archivo)
+    "micangl/cmp-vimtex",
   },
   config = function()
     local cmp = require("cmp")
@@ -41,11 +42,24 @@ return {
         end, { "i", "s" }),
       }),
       sources = cmp.config.sources({
+        {
+          name = 'vimtex',
+          keyword_length = 0,
+          trigger_characters = { "\\" }
+        },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
       }),
     })
+
+    -- cmp.setup.filetype("tex", {
+    --   sources = {
+    --     { name = 'vimtex', keyword_length = 0, trigger_characters = { "\\" } },
+    --     { name = 'buffer' },
+    --     -- other sources
+    --   },
+    -- })
   end,
 }
