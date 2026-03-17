@@ -2,7 +2,7 @@
 
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate", -- Comando que se ejecuta después de la instalación
+  build = ":TSUpdate",                    -- Comando que se ejecuta después de la instalación
   event = { "BufReadPre", "BufNewFile" }, -- Se carga solo al abrir un archivo
 
   -- Aquí está la configuración, dentro de la tabla 'opts'
@@ -26,13 +26,13 @@ return {
       enable = true,
     },
     indents = {
-        enable = true
+      enable = true
     },
     folds = {
-        enable = true
+      enable = true
     },
     locals = {
-        enable = true
+      enable = true
     }
   },
 }

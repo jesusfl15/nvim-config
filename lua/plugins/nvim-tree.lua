@@ -38,7 +38,7 @@ return {
     },
 
     actions = {
-      open_file ={
+      open_file = {
         quit_on_open = true,
       },
     },
@@ -66,6 +66,6 @@ return {
 
   -- Aquí definimos el atajo para abrir y cerrar el panel
   keys = {
-    { "<leader>e","<CMD>NvimTreeFindFileToggle<CR>" , desc = "Toggle file explorer" },
+    { "<leader>e", "<CMD>NvimTreeFindFileToggle<CR>", desc = "Toggle file explorer" },
   },
 }

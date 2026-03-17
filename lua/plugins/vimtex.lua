@@ -26,7 +26,7 @@ return {
     -- })
     --
     -- registro de un imap (ejemplo)
-    -- 
+    --
     -- vim.fn["vimtex#imaps#add_map"]({
     --   lhs = "a",
     --   rhs = "\\alpha",

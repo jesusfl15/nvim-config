@@ -17,7 +17,7 @@ local custom_nvimtree = {
       },
     }
   },
-  filetypes = {'NvimTree'}
+  filetypes = { 'NvimTree' }
 }
 
 return {
@@ -31,7 +31,7 @@ return {
     extensions = { custom_nvimtree },
     sections = {
       lualine_z = { -- mostrar la hora en la barra
-        {'location'},
+        { 'location' },
         {
           function()
             return " " .. os.date("%H:%M")

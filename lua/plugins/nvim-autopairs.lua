@@ -11,7 +11,7 @@ return {
     npairs.setup({
       check_ts = true,
       fast_wrap = {},
-      disable_filetype = { "tex" , "markdown" },
+      disable_filetype = { "tex", "markdown" },
     })
 
     -- integración con nvim-cmp

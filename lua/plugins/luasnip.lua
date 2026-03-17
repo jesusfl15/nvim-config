@@ -2,7 +2,7 @@
 
 return {
   "L3MON4D3/LuaSnip",
-  version = "v2.*", -- versión estable recomendada
+  version = "v2.*",                -- versión estable recomendada
   build = "make install_jsregexp", -- para soporte avanzado de regex en snippets
   config = function()
     local luasnip = require("luasnip")
@@ -24,4 +24,3 @@ return {
     end, { silent = true })
   end,
 }
-
