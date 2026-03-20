@@ -25,4 +25,10 @@ if vim.fn.isdirectory(undodir) == 0 then
   vim.fn.mkdir(undodir, 'p')
 end
 
+vim.opt.list = true
+vim.opt.listchars = {
+  trail = "·",
+  -- space = "·",
+}
+
 return M
