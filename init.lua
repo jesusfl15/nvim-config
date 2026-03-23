@@ -1,4 +1,4 @@
--- leader y localleader se definen en config.lazy y en options por redundancia
+-- leader y localleader se definen en core.lazy y en options por redundancia
 
 require("config.options")
 require("config.keymaps")
