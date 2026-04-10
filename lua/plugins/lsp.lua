@@ -12,12 +12,12 @@ return {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
 
-      -- Diagnósticos flotantes al hacer pausa
-      vim.api.nvim_create_autocmd("CursorHold", {
-        callback = function()
-          vim.diagnostic.open_float(nil, { focus = false, border = "rounded" })
-        end,
-      })
+      -- -- Diagnósticos flotantes al hacer pausa
+      -- vim.api.nvim_create_autocmd("CursorHold", {
+      --   callback = function()
+      --     vim.diagnostic.open_float(nil, { focus = false, border = "rounded" })
+      --   end,
+      -- })
 
       -- texlab
       vim.lsp.config("texlab", {

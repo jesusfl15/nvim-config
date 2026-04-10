@@ -31,4 +31,12 @@ vim.opt.listchars = {
   -- space = "·",
 }
 
+-- Diagnósticos inline estilo "mágico" (simple)
+vim.diagnostic.config({
+  virtual_text = true,            -- activa texto virtual minimalista
+  signs = true,                   -- iconos en columna de signos
+  update_in_insert = false,
+  float = { border = "rounded" }, -- para cuando uses :Diag
+})
+
 return M
